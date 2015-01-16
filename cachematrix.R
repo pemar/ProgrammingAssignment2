@@ -1,3 +1,7 @@
+## The following two functions were implemented based on the
+## the algorithms of  functions 'makeVector' and 'cachemean' by
+## Dr. Roger D. Peng
+
 ## makeCacheMatrix creates a special "matrix", which is  a list containing
 ## the following functions:
 
@@ -9,8 +13,8 @@
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
-        x <<- y     # x is in the parent environment of 'set', i.e. 'makevector'
-        m <<- NULL  # same case for m
+        x <<- y     
+        m <<- NULL  
     }
     get <- function() x
     setinv <- function(inv) m <<- solve
